@@ -1,0 +1,387 @@
+:root {
+    --color-white: #FFF;
+    --color-red: #FF6565;
+    --color-text: #071629;
+
+    /* typo */
+
+    --font-sourcesanspro: Source Sans Pro;
+
+    /* format */
+
+    --tablette: 768px;
+    --smartphone: 375px;
+}
+
+body {
+    margin: 0;
+}
+
+/** header **/
+
+.header_img {
+    background-image: url(./images/headphones_hero_1.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 12.5rem;
+}
+
+header img {
+    width: 10.0625rem;
+    height: 2rem;
+    flex-shrink: 0;
+    margin-top: 1.70rem;
+}
+
+.navbar {
+    display: flex;   
+}
+
+.navbar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 2.5rem;
+    margin-top: 1.70rem;
+    color: var(--color-white);
+    font-family: var(--font-sourcesanspro);
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.navbar li {
+    overflow: hidden;
+}
+
+.navbar li:hover {
+    color: #FF6565;
+}
+
+.navbar li:first-child {
+    margin-left: 0;
+}
+
+.navbar li:last-child {
+    margin-right: 0;
+}
+
+.menu_button {
+    display: none;
+}
+
+/** navbar (menu button) **/
+
+@media screen and (max-width: 375px ) {
+    header {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .div_logo_button {
+        display: flex;
+        margin-top: 1.70rem;
+    }
+
+    header img {
+        margin-top: 0;
+    }
+
+    .navbar ul{
+        flex-direction: column;
+    }
+
+    .navbar li {
+        margin: 2rem 0 0 0;
+    }
+}
+
+
+/** main part **/
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_part {
+    height: 50rem;
+    flex-shrink: 0;
+}
+
+.main_part .main_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_text {
+    margin-top: 20rem;
+    max-width: 40rem;
+    height: 20rem;
+    flex-shrink: 0;
+}
+
+.main_part h1 { 
+    color: var(--color-white);
+    text-align: center;
+    font-family: var(--font-sourcesanspro);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+
+.main_part h2 {
+    color: var(--color-white);
+    text-align: center;
+    font-family: var(--font-sourcesanspro);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+
+.main_part button {
+    margin: 2.5rem 0 0 0;
+    width: 10rem;
+    height: 2.75rem;
+    flex-shrink: 0;
+    border-radius: 1.5rem;
+    background: var(--color-red);
+    border: 0;
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.50);
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font-sourcesanspro);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.main_part button:hover {
+    opacity: 0.9;
+}
+
+.main_part p {
+    margin: 4.8rem 0 0 0;
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font-sourcesanspro);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.625rem; /* 162.5% */
+}
+
+/** section what_we_do **/
+
+.what_we_do {
+    text-align: center; 
+    background-color: #FFF;
+}
+
+.text_what_we_do {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.text_what_we_do h1 {
+    margin-top: 7rem;
+    color: var(--color-text);
+    font-family: var(--font-sourcesanspro);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    max-width:40rem;
+}
+
+.text_what_we_do p {
+    color: var(--color-text);
+    font-family: var(--font-sourcesanspro);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.625rem; /* 162.5% */
+    max-width:40rem;
+}
+
+.part_icon_what_we_do {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+}
+
+.part_icon_what_we_do div {
+    margin: 0 1.81rem 0 1.81rem;
+}
+
+.part_icon_what_we_do div:first-child {
+    margin-left: 0;
+}
+
+.part_icon_what_we_do div:last-child {
+    margin-right: 0;
+}
+
+.part_icon_what_we_do h2 {
+    color: var(--color-text);
+    text-align: center;
+    font-family: var(--font-sourcesanspro);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.625rem; /* 144.444% */
+}
+
+.part_icon_what_we_do p {
+    color: var(--color-text);
+    text-align: center;
+    font-family: var(--font-sourcesanspro);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.625rem; /* 185.714% */
+    width: 13rem;
+    margin-bottom: 6.7rem;
+}
+
+@media screen and (max-width: 375px) {
+    .part_icon_what_we_do {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .part_icon_what_we_do {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Section pentagon */
+
+.text_pentagon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.part_pentagon {
+    background-image: url(./images/headphones_hero_2.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.text_pentagon h1 {
+    margin-top: 8rem;
+    color: var(--color-white);
+    text-align: center;
+    font-family: var(--font-sourcesanspro);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    max-width: 40rem;
+}
+
+.text_pentagon p {
+    color: var(--color-white);
+    text-align: center;
+    font-family: var(--font-sourcesanspro);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.625rem;
+    max-width: 40rem;
+}
+
+.pentagon {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+}
+
+.pentagon img {
+    width: 11.875rem;
+    height: 11.875rem;
+    flex-shrink: 0;
+    margin-bottom: 5rem;
+}
+
+.pentagon div {
+    margin: 3.5rem 2.375rem 0 2.375rem;
+}
+
+.pentagon div:first-child {
+    margin-left: 0;
+}
+
+.pentagon div:last-child {
+    margin-right: 0;
+}
+
+.pentagon {
+    position: relative;
+}
+
+.pentagon div {
+    position: relative;
+    display: inline-block;
+}
+
+.pentagon div div {
+    position: absolute;
+    top: 24px;
+    left: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: white; /* Couleur du texte */
+}
+
+.pentagon span {
+    color: var(--color-white);
+    text-align: center;
+    font-family: var(--font-sourcesanspro);
+    font-size: 2.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.625rem; /* 56.522% */
+}
+
+.pentagon p {
+    color: var(--color-white);
+    text-align: center;
+    font-family: var(--font-sourcesanspro);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.625rem;
+}
