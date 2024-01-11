@@ -38,10 +38,12 @@ header img {
     height: 2rem;
     flex-shrink: 0;
     margin-top: 1.70rem;
+    padding-right: 20px;
 }
 
 .navbar {
-    display: flex;   
+    display: flex;
+    margin-left: auto;   
 }
 
 .navbar ul {
@@ -61,11 +63,15 @@ header img {
     line-height: normal;
 }
 
+.navbar a {
+    color: var(--color-white);
+}
+
 .navbar li {
     overflow: hidden;
 }
 
-.navbar li:hover {
+.navbar a:hover {
     color: #FF6565;
 }
 
@@ -81,13 +87,19 @@ header img {
     text-decoration: none;
 }
 
-.menu_button {
-    display: none;
+#menu-btn {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+}
+
+.menu-icon {
+    visibility: hidden;
 }
 
 /** navbar (menu button) **/
 
-@media screen and (max-width: 375px ) {
+@media screen and (max-width: 480px) {
     header {
         flex-direction: column;
         margin: 0;
@@ -100,6 +112,7 @@ header img {
 
     header img {
         margin-top: 0;
+        padding: 0;
     }
 
     .navbar ul{
@@ -108,6 +121,117 @@ header img {
 
     .navbar li {
         margin: 2rem 0 0 0;
+    }
+    
+    .navbar li:first-child {
+        margin-right: 0;
+        text-align: center;
+    }
+    
+    .navbar li:last-child {
+        margin-right: 0;
+    }
+    
+    .navbar {
+        display: flex;
+        margin-left: 0;   
+    }
+
+    #menu-btn {
+        position: absolute;
+        top: 3.5%;
+        left: 5%;
+        display: none;
+    }
+
+    .menu-icon {
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
+        padding: 30px 20px 30px 0;
+        position: absolute;
+        user-select: none;
+        visibility: visible;
+        top: 2.5%;
+        left: 5%;
+    }
+
+    .navicon {
+        background: #ffffff;
+        display: block;
+        height: 2px;
+        width: 20px;
+        position: relative;
+        border-radius: 100px;
+    }
+
+    .navicon:before {
+        top: 5px;
+    }
+
+    .navicon:after {
+        top: -5px;
+    }
+    
+    .navicon:before,
+    .navicon:after {
+        background: var(--color-white);
+        display: block;
+        width: 30px;
+        height: 100%;
+        content: "";
+        position: absolute;
+        transition: all 0.2s ease-out;
+    }
+
+    .menu-btn:checked ~ .navbar {
+        max-height: 240px;
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon {
+        background: transparent;
+    }
+    
+    .menu-btn:checked ~ .menu-icon .navicon:before {
+        transform: rotate(-45deg);
+    }
+    
+    .menu-btn:checked ~ .menu-icon .navicon:after {
+        transform: rotate(45deg);
+    }
+    
+    .menu-btn:checked ~ .menu-icon .navicon:before,
+    .menu-btn:checked ~ .menu-icon .navicon:after 
+    {
+        top: 0;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .menu-btn:checked ~ .navbar {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        margin: 0 4.30rem;
+    }
+
+    .navbar li {
+        margin: 0 1rem;
+        margin-top: 1.70rem;
+    }
+
+    .navbar li:first-child {
+        margin-left: 0;
+    }
+    
+    .navbar li:last-child {
+        margin-right: 0;
     }
 }
 
@@ -197,6 +321,11 @@ main {
     padding: 0 1.25rem;
 }
 
+@media screen and (max-width: 767px) {
+    .main_text {
+        margin-top: 10rem;
+    }
+}
 
 
 /** section what_we_do **/
@@ -281,7 +410,7 @@ main {
     padding: 0 1.25rem;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
     .part_icon_what_we_do {
         flex-direction: column;
         align-items: center;
@@ -438,7 +567,7 @@ main {
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
     .pentagon {
         flex-direction: column;
         align-content: center;
@@ -566,7 +695,7 @@ footer p {
      }
 }
 
-@media screen and (max-width: 374px) {
+@media screen and (max-width: 480px) {
     .footer_div {
         margin: 5.75rem 7.63rem 4.45rem 7.63rem;
         flex-direction: column;
